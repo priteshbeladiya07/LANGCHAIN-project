@@ -1,29 +1,50 @@
-# LangChain AI Chat Assistant
-
-A simple Streamlit chatbot built with LangChain and Mistral AI.
+# LangChain AI Project
 
 ## Overview
 
-This repository contains a small AI chat app that uses:
-- `langchain` and `langchain-mistralai`
-- Mistral AI as the model backend
-- Streamlit for the UI
+This repository contains a LangChain-based AI chatbot project with modular folders for UI, embeddings, model logic, and bot orchestration.
 
-## Project structure
+## Repository structure
 
-- `ChatModel/UIChatbot.py` — main Streamlit application
-- `requirements.txt` — Python dependencies
-- `.gitignore` — ignored files
-- `README.md` — project documentation
+- `ChatModel/`
+  - Streamlit interface and main chat application
+  - `UIChatbot.py` is the front-end app file
 
-## What this app does
+- `EmbeddingModel/`
+  - Embedding generation and vector search utilities
+  - Contains code for building embeddings used by the assistant
 
-The app lets users chat with an AI assistant in different personality modes:
-- Angry
-- Funny
-- Sad
+- `LLM/`
+  - Language model integration logic
+  - Wrappers and helpers for calling Mistral, OpenAI, or other LLM providers
 
-It keeps simple session state and displays chat messages in the Streamlit interface.
+- `MTBot/`
+  - Multi-turn bot behavior and agent orchestration
+  - Implements chat flow, session state, and response handling
+
+- `requirements.txt`
+  - Python dependency list for reproducing the environment
+  - Install with `pip install -r requirements.txt`
+
+- `.gitignore`
+  - Ignore local environment files and caches
+  - Includes `venv/`, `.env`, `__pycache__/`, and related files
+
+- `.env`
+  - Local environment variables file
+  - Contains API keys and secrets
+  - Do not commit this file
+
+- `venv/`
+  - Local Python virtual environment
+  - Should remain local and is excluded from Git
+
+## What this project does
+
+- Builds a chat assistant UI with Streamlit
+- Uses LangChain for model orchestration
+- Supports embeddings and memory for chat context
+- Connects to external LLMs via API keys stored in `.env`
 
 ## Setup
 
@@ -44,7 +65,7 @@ It keeps simple session state and displays chat messages in the Streamlit interf
    pip install -r requirements.txt
    ```
 
-4. Create a `.env` file with your API key:
+4. Create a `.env` file:
    ```text
    MISTRAL_API_KEY=your_api_key_here
    ```
@@ -56,6 +77,6 @@ It keeps simple session state and displays chat messages in the Streamlit interf
 
 ## Notes
 
-- Do not commit your `.env` file.
-- The `venv` folder is ignored by `.gitignore`.
-- If you want to improve the app, update `ChatModel/UIChatbot.py`.
+- `venv/` is local only and should not be pushed.
+- `.env` is for secrets and should not be tracked.
+- Review `requirements.txt` before installing.
