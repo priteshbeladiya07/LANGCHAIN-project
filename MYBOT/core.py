@@ -7,7 +7,6 @@ from langchain_core.output_parsers import PydanticOutputParser
 load_dotenv()
 from langchain_mistralai import ChatMistralAI
 
-
 model = ChatMistralAI(model = 'mistral-small-2506')
 
 class Movie(BaseModel):
@@ -37,7 +36,6 @@ final_prompt = prompt.invoke(
      'format_instructions': parser.get_format_instructions()
      }
 )
-
 response = model.invoke(final_prompt)
 movie_data = parser.parse(response.content)
 
