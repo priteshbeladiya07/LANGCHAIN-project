@@ -5,7 +5,6 @@
 ![Python](https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&logo=python)
 ![LangChain](https://img.shields.io/badge/LangChain-Framework-green?style=for-the-badge)
 ![AI](https://img.shields.io/badge/Generative-AI-red?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
 ---
 
