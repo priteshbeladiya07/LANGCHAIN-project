@@ -114,7 +114,7 @@ pip install -r requirements.txt
 Clone the repository
 
 ```bash
-git clone https://github.com/jeetgondaliya2-prog/LANGCHAIN_project.git
+git clone https://github.com/priteshbeladiya07/LANGCHAIN_project.git
 ```
 
 Go inside the project
