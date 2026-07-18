@@ -1,82 +1,251 @@
-# LangChain AI Project
+# 🚀 LANGCHAIN Project
 
-## Overview
+> A beginner-friendly collection of LangChain examples demonstrating different Chat Models and Embedding Models using Python.
 
-This repository contains a LangChain-based AI chatbot project with modular folders for UI, embeddings, model logic, and bot orchestration.
+![Python](https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&logo=python)
+![LangChain](https://img.shields.io/badge/LangChain-Framework-green?style=for-the-badge)
+![AI](https://img.shields.io/badge/Generative-AI-red?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
-## Repository structure
+---
 
-- `ChatModel/`
-  - Streamlit interface and main chat application
-  - `UIChatbot.py` is the front-end app file
+# 📌 About
 
-- `EmbeddingModel/`
-  - Embedding generation and vector search utilities
-  - Contains code for building embeddings used by the assistant
+This repository contains hands-on examples of **LangChain** concepts.
 
-- `LLM/`
-  - Language model integration logic
-  - Wrappers and helpers for calling Mistral, OpenAI, or other LLM providers
+The project demonstrates:
 
-- `MTBot/`
-  - Multi-turn bot behavior and agent orchestration
-  - Implements chat flow, session state, and response handling
+- 🤖 Working with different LLM providers
+- 💬 Building AI Chatbots
+- 🔍 Using Embedding Models
+- 🧠 HuggingFace Embeddings
+- 📦 Modular Python Project Structure
 
-- `requirements.txt`
-  - Python dependency list for reproducing the environment
-  - Install with `pip install -r requirements.txt`
+This repository is ideal for beginners who are starting their journey in **Generative AI** and **LangChain**.
 
-- `.gitignore`
-  - Ignore local environment files and caches
-  - Includes `venv/`, `.env`, `__pycache__/`, and related files
+---
 
-- `.env`
-  - Local environment variables file
-  - Contains API keys and secrets
-  - Do not commit this file
+# 📂 Project Structure
 
-- `venv/`
-  - Local Python virtual environment
-  - Should remain local and is excluded from Git
+```
+LANGCHAIN_project/
+│
+├── MYBOT/
+│   ├── UIMYbot.py
+│   └── core.py
+│
+├── chatmodels/
+│   ├── UIchatbot.py
+│   ├── 1_chatmodel_groq.py
+│   ├── 2_chatmodel_gemini.py
+│   ├── 3_chatmodel_mistral.py
+│   ├── chatbot.py
+│   ├── UIChatbot.py
+│   ├── huggingfacemodel.py
+│   └──localmodel.py
+│
+├── embeddingmodels/
+│   ├── embeddings.py
+│   └── huggingface_embeddings.py
+│
+├── LLM/
+│   └── demo.py
+│
+├── .gitignore
+├── requirements.txt
+└── README.md
+│
+├── requirements.txt
+```
 
-## What this project does
+---
 
-- Builds a chat assistant UI with Streamlit
-- Uses LangChain for model orchestration
-- Supports embeddings and memory for chat context
-- Connects to external LLMs via API keys stored in `.env`
+# 📁 Folder Explanation
 
-## Setup
+## 📂 MYBOT/
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/priteshbeladiya07/langchain.git
-   cd langchain
-   ```
+Contains the core logic used by the chatbot.
 
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   venv\Scripts\activate
-   ```
+| File | Description |
+|------|-------------|
+| **UIMYbot.py** | User Interface related core functionality |
+| **core.py** | Main backend logic and reusable functions |
 
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+---
 
-4. Create a `.env` file:
-   ```text
-   MISTRAL_API_KEY=your_api_key_here
-   ```
+## 📂 chatmodels/
 
-5. Run the app:
-   ```bash
-   streamlit run ChatModel/UIChatbot.py
-   ```
+Examples of different Large Language Models supported by LangChain.
 
-## Notes
+| File | Description |
+|------|-------------|
+| **UIchatbot.py** | Chatbot with a simple user interface |
+| **1_chatmodel_groq.py** | Groq  integration |
+| **2_chatmodel_gemini.py** | Google GeminiLLM integration |
+| **3_chatmodel_mistral.py** | Mistral AI integration |
+| **chatbot.py** | Basic chatbot implementation |
 
-- `venv/` is local only and should not be pushed.
-- `.env` is for secrets and should not be tracked.
-- Review `requirements.txt` before installing.
+---
+
+## 📂 embeddingmodels/
+
+Examples of vector embedding models.
+
+| File | Description |
+|------|-------------|
+| **embeddings.py** | Basic embedding model examples |
+| **huggingface_embeddings.py** | HuggingFace embedding models using LangChain |
+
+---
+
+## 📄 requirements.txt
+
+Contains all required Python libraries.
+
+Install them using
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/jeetgondaliya2-prog/LANGCHAIN_project.git
+```
+
+Go inside the project
+
+```bash
+cd LANGCHAIN_project
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Create a `.env` file
+
+```env
+GOOGLE_API_KEY=your_api_key
+GROQ_API_KEY=your_api_key
+HF_TOKEN=your_huggingface_token
+```
+
+---
+
+# ▶️ Running Examples
+
+Run Gemini Chat Model
+
+```bash
+python chatmodels/chat_gemini_ai.py
+```
+
+Run Groq Model
+
+```bash
+python chatmodels/chat_groq_ai.py
+```
+
+Run Mistral Model
+
+```bash
+python chatmodels/chat_mistral_ai.py
+```
+
+Run Embedding Example
+
+```bash
+python embeddingmodels/embeddings.py
+```
+
+Run HuggingFace Embeddings
+
+```bash
+python embeddingmodels/huggingface_embeddings.py
+```
+
+---
+
+# 📚 Technologies Used
+
+- Python
+- LangChain
+- Google Gemini
+- Groq
+- Mistral AI
+- HuggingFace
+- dotenv
+
+---
+
+# 🎯 Learning Objectives
+
+- Learn LangChain basics
+- Understand Chat Models
+- Explore Embedding Models
+- Work with Multiple LLM Providers
+- Build AI Chatbots
+- Organize LangChain Projects
+
+---
+
+# 📖 Repository Contents
+
+✅ Chat Models
+
+- Gemini AI
+- Groq AI
+- Mistral AI
+
+✅ Embedding Models
+
+- LangChain Embeddings
+- HuggingFace Embeddings
+
+✅ Chatbot
+
+- Basic Chatbot
+- UI Chatbot
+
+---
+
+# 🤝 Contributions
+
+Contributions are welcome!
+
+Feel free to fork this repository and submit a pull request.
+
+---
+
+# 👨‍💻 Author
+
+**Pritesh Beladiya**
+
+- 🎓 IIIT Nagpur
+- 💻 B.Tech ECE (2025–2029)
+- 🌱 Learning Generative AI, Machine Learning & DSA
+
+GitHub:
+https://github.com/priteshbeladiya07
+
+---
+
+# ⭐ Support
+
+If you found this repository helpful,
+
+⭐ Star the repository
+
+🍴 Fork it
+
+📢 Share it with others
+
+Happy Coding! 🚀
